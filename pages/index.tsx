@@ -15,7 +15,6 @@ const HomePage = () => {
 
   return (
     <div>
-      <Navbar />
       {productList.map((product) => (
         <div>{product.name}</div>
       ))}
