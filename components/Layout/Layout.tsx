@@ -6,7 +6,9 @@ const Layout: React.FC = ({ children }) => {
     <div>
       <Navbar />
       {children}
-      <footer>this is the footer</footer>
+      <footer>
+        <p>this is the footer</p>
+      </footer>
     </div>
   )
 }

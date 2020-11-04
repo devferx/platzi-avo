@@ -15,7 +15,7 @@ const HomePage = () => {
 
   return (
     <div>
-      {/* <Header /> */}
+      <Header />
       {/* {productList.map((product) => (
         <div>{product.name}</div>
       ))} */}
