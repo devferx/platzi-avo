@@ -1,0 +1,44 @@
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2em;
+  box-sizing: border-box;
+}
+
+.navbarLogoContainer {
+  display: flex;
+  align-items: center;
+}
+
+.navbarLogoImage {
+  height: 53px;
+}
+
+.navbarLogoTitle {
+  font-weight: 700;
+  font-size: 2em;
+  color: var(--textColor);
+  margin: 0.75em;
+}
+
+.navbarMenu {
+  display: flex;
+  align-items: center;
+}
+
+.navbarLink {
+  text-decoration: none;
+  color: var(--textColor);
+  font-size: 1.45em;
+  margin-right: 10px;
+}
+
+.navbarLink:last-child {
+  margin-right: 0;
+}
+
+.navbarPicnic {
+  height: 45px;
+}
