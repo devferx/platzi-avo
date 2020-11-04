@@ -5,5 +5,12 @@ body {
 }
 
 :root {
+  --primary: #9bf1b7;
   --textColor: #313819;
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 12px;
+  }
 }

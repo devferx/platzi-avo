@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import Navbar from '../components/Navbar/Navbar'
+import Header from '@components/Header/Header'
 
 const HomePage = () => {
   const [productList, setProductList] = useState<TProduct[]>([])
@@ -15,9 +15,10 @@ const HomePage = () => {
 
   return (
     <div>
-      {productList.map((product) => (
+      {/* <Header /> */}
+      {/* {productList.map((product) => (
         <div>{product.name}</div>
-      ))}
+      ))} */}
     </div>
   )
 }
