@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import Header from '@components/Header/Header'
+import CardList from '@components/CardList/CardList'
 
 const HomePage = () => {
   const [productList, setProductList] = useState<TProduct[]>([])
@@ -16,9 +17,7 @@ const HomePage = () => {
   return (
     <div>
       <Header />
-      {/* {productList.map((product) => (
-        <div>{product.name}</div>
-      ))} */}
+      <CardList listAvos={productList} />
     </div>
   )
 }
