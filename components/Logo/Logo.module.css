@@ -1,0 +1,17 @@
+.logoContainer {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  width: max-content;
+}
+
+.logoImage {
+  height: 53px;
+}
+
+.logoTitle {
+  font-weight: 700;
+  font-size: 2em;
+  color: var(--textColor);
+  margin: 0.75em;
+}

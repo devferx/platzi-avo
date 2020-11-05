@@ -1,20 +1,12 @@
 import React from 'react'
 import Link from 'next/link'
+import Logo from '@components/Logo/Logo'
 import styles from './Navbar.module.css'
 
 export default function Navbar() {
   return (
     <nav className={styles.navbar}>
-      <Link href="/">
-        <a className={styles.navbarLogoContainer}>
-          <img
-            className={styles.navbarLogoImage}
-            src="/images/avocado-nav.svg"
-            alt="avocado"
-          />
-          <p className={styles.navbarLogoTitle}>platzi avocado</p>
-        </a>
-      </Link>
+      <Logo />
 
       <label htmlFor="checkbox">
         <img className={styles.menuIcon} src="images/menu.svg" alt="menu" />

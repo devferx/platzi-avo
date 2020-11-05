@@ -8,23 +8,6 @@
   box-sizing: border-box;
 }
 
-.navbarLogoContainer {
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-}
-
-.navbarLogoImage {
-  height: 53px;
-}
-
-.navbarLogoTitle {
-  font-weight: 700;
-  font-size: 2em;
-  color: var(--textColor);
-  margin: 0.75em;
-}
-
 .checkbox {
   display: none;
 }
