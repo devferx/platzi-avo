@@ -86,7 +86,7 @@
   justify-content: center;
 }
 .avoLoadingImage {
-  width: 75px;
+  width: 100px;
   animation: avoloading 1s infinite linear;
 }
 

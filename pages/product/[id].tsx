@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react'
 import { useRouter } from 'next/router'
 import fetch from 'isomorphic-unfetch'
 import styles from './product.module.css'
-import ProductInfoCard from '@components/ProductInfoCard/ProductInfoCard'
 import ProductInfoCardList from '@components/ProductInfoCardList/ProductInfoCardList'
 
 const ProductPage = () => {

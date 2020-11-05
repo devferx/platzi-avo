@@ -23,11 +23,13 @@
 
 .navbarLink {
   text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
   display: flex;
   align-items: center;
   color: var(--textColor);
-  font-size: 1.45em;
-  margin-right: 10px;
+  font-size: 1.2em;
+  margin-right: 1.2em;
 }
 
 .navbarLink:last-child {
