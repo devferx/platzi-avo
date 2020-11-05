@@ -15,7 +15,7 @@ const Card = ({ avo }: Props) => (
         Precio: <strong>{avo.price}$</strong>
       </p>
     </div>
-    <Link href={`/`}>
+    <Link href={'/product/[id]'} as={`/product/${avo.id}`}>
       <a className={styles.btn}>ver mas</a>
     </Link>
   </div>

@@ -1,6 +1,6 @@
 .footerContainer {
   margin-top: 2em;
-  border-top: 2px solid #f2f2f2;
+  border-top: 2px solid var(--lightGray);
 
   display: flex;
   flex-direction: column;
