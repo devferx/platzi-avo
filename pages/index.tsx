@@ -15,10 +15,10 @@ const HomePage = () => {
   }, [])
 
   return (
-    <div>
+    <>
       <Header />
       <CardList listAvos={productList} />
-    </div>
+    </>
   )
 }
 

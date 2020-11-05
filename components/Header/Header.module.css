@@ -95,6 +95,7 @@
     height: auto;
     grid-template-columns: 1fr;
     grid-template-rows: calc(100vh - 80px) 100vh;
+    font-size: 10px;
   }
 
   .avocado {

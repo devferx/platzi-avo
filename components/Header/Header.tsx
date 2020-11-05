@@ -3,7 +3,7 @@ import styles from './Header.module.css'
 
 const Header = () => {
   return (
-    <div className={styles.header}>
+    <header className={styles.header}>
       <div className={styles.textContent}>
         <h1 className={styles.textContentTitle}>avocados are the future!</h1>
         <p className={styles.textContentParagraph}>
@@ -20,7 +20,7 @@ const Header = () => {
           />
         </div>
       </div>
-    </div>
+    </header>
   )
 }
 
