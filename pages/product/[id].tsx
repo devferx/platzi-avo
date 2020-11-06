@@ -1,12 +1,15 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useContext } from 'react'
 import { useRouter } from 'next/router'
 import fetch from 'isomorphic-unfetch'
 import styles from './product.module.css'
 import ProductInfoCardList from '@components/ProductInfoCardList/ProductInfoCardList'
+import { CartContext } from '@context/CartContext'
+import { CartItem } from 'models/cart'
 
 const ProductPage = () => {
+  const cartContext = useContext(CartContext)
   const [product, setProduct] = useState<TProduct>()
-  const [quantity, setQuantity] = useState(0)
+  const [quantity, setQuantity] = useState(1)
   const {
     query: { id },
   } = useRouter()
@@ -25,7 +28,22 @@ const ProductPage = () => {
 
   const handleChangeInputQuantity = (
     event: React.ChangeEvent<HTMLInputElement>
-  ) => setQuantity(parseInt(event.target.value))
+  ) => {
+    if (event.target.value === '') return
+    setQuantity(parseInt(event.target.value))
+  }
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault()
+    const newCartItem: CartItem = new CartItem(
+      product?.name as string,
+      quantity,
+      product?.price as number
+    )
+
+    cartContext?.addToCart(newCartItem)
+    setQuantity(1)
+  }
 
   return product?.name ? (
     <section className={styles.mainContainer}>
@@ -42,12 +60,12 @@ const ProductPage = () => {
           <h3 className={styles.name}>{product.name}</h3>
           <p className={styles.price}>precio: {product.price}$</p>
           <span className={styles.sku}>SKU: {product.sku}</span>
-          <form className={styles.form}>
+          <form className={styles.form} onSubmit={handleSubmit}>
             <input
               className={styles.quantityInput}
-              value={quantity}
+              value={Number(quantity)}
               onChange={handleChangeInputQuantity}
-              min={0}
+              min={1}
               max={99}
               type="number"
             />

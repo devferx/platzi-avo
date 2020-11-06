@@ -1,9 +1,11 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import Link from 'next/link'
 import Logo from '@components/Logo/Logo'
 import styles from './Navbar.module.css'
+import { CartContext } from '@context/CartContext'
 
 export default function Navbar() {
+  const cartContext = useContext(CartContext)
   return (
     <nav className={styles.navbar}>
       <Logo />
@@ -27,7 +29,7 @@ export default function Navbar() {
         </Link>
         <Link href="/">
           <a className={styles.navbarLink}>
-            Canasta (0)
+            Canasta ({cartContext?.totalQuantityProducts})
             <img
               className={styles.navbarPicnic}
               src="/images/picnic-basket.svg"

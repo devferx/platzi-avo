@@ -1,5 +1,6 @@
 import { AppProps } from 'next/app'
 import Layout from '@components/Layout/Layout'
+import CartProvider from '../context/CartContext'
 import '../style.css'
 
 function MyApp({ Component, pageProps }: AppProps) {
@@ -7,9 +8,11 @@ function MyApp({ Component, pageProps }: AppProps) {
   // Layout
   // props adicionales
   return (
-    <Layout>
-      <Component {...pageProps} />
-    </Layout>
+    <CartProvider>
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
+    </CartProvider>
   )
 }
 
