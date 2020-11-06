@@ -1,0 +1,18 @@
+.avoLoading {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.avoLoadingImage {
+  width: 100px;
+  animation: avoloading 1s infinite linear;
+}
+
+@keyframes avoloading {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(365deg);
+  }
+}

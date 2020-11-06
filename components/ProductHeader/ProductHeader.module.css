@@ -1,0 +1,39 @@
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.image {
+  width: 100%;
+}
+
+.heroTextContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.name {
+  font-size: 2em;
+  color: var(--textColor);
+  margin: 0;
+}
+
+.sku {
+  display: block;
+  width: max-content;
+  background-color: var(--textColor);
+  color: white;
+  padding: 3px;
+  border-radius: 3px;
+}
+
+@media screen and (max-width: 768px) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
+
+  .heroImage {
+    width: 100%;
+  }
+}
