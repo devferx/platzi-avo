@@ -1,8 +1,14 @@
-import { table } from 'console'
-import React from 'react'
+import React, { useContext } from 'react'
 import styles from './Cart.module.css'
+import { CartContext } from '@context/CartContext'
 
 const Cart = () => {
+  const cartContext = useContext(CartContext)
+
+  const handleAdd = (cartItemName: string, quantityToAdd: number) => {
+    cartContext?.addProduct(cartItemName, quantityToAdd)
+  }
+
   return (
     <section className={styles.mainContainer}>
       <h1 className={styles.title}>Carrito de compras</h1>
@@ -18,57 +24,43 @@ const Cart = () => {
             </tr>
           </thead>
           <tbody>
-            <tr className={styles.tableBodyRow}>
-              <td>Avo 1</td>
-              <td>3</td>
-              <td>1.25 $</td>
-              <td>50 $</td>
-              <td>
-                <button className={styles.action}>
-                  <img
-                    className={styles.actionIcon}
-                    src="/images/add.svg"
-                    alt="add"
-                  />
-                </button>
-                <button className={styles.action}>
-                  <img
-                    className={styles.actionIcon}
-                    src="/images/remove.svg"
-                    alt="add"
-                  />
-                </button>
-              </td>
-            </tr>
-            <tr className={styles.tableBodyRow}>
-              <td>Avo 2</td>
-              <td>3</td>
-              <td>1.25 $</td>
-              <td>50 $</td>
-              <td>
-                <button className={styles.action}>
-                  <img
-                    className={styles.actionIcon}
-                    src="/images/add.svg"
-                    alt="add"
-                  />
-                </button>
-                <button className={styles.action}>
-                  <img
-                    className={styles.actionIcon}
-                    src="/images/remove.svg"
-                    alt="add"
-                  />
-                </button>
-              </td>
-            </tr>
+            {cartContext?.cart.map((item) => (
+              <tr key={item.productName} className={styles.tableBodyRow}>
+                <td>{item.productName}</td>
+                <td>{item.quantity}</td>
+                <td>{item.price} $</td>
+                <td>{(item.quantity * item.price).toFixed(2)} $</td>
+                <td>
+                  <button
+                    className={styles.action}
+                    onClick={() => handleAdd(item.productName, 1)}
+                  >
+                    <img
+                      className={styles.actionIcon}
+                      src="/images/add.svg"
+                      alt="add"
+                    />
+                  </button>
+                  <button
+                    className={styles.action}
+                    onClick={() => handleAdd(item.productName, -1)}
+                  >
+                    <img
+                      className={styles.actionIcon}
+                      src="/images/remove.svg"
+                      alt="add"
+                    />
+                  </button>
+                </td>
+              </tr>
+            ))}
             <tr
               className={`${styles.tableBodyRow} ${styles.tableImportantRow}`}
             >
               <td>Total</td>
-              <td>6</td>
+              <td>{cartContext?.totalQuantityProducts}</td>
               <td></td>
-              <td>50 $</td>
+              <td>{cartContext?.totalPrice.toFixed(2)} $</td>
               <td></td>
             </tr>
           </tbody>
