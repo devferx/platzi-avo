@@ -3,6 +3,12 @@ import Layout from '@components/Layout/Layout'
 import CartProvider from '../context/CartContext'
 import '../style.css'
 
+// export function reportWebVitals(metric) {
+// console.log(metric)
+// analytics - calibre
+// serverAnulicts.log(metric)
+// }
+
 function MyApp({ Component, pageProps }: AppProps) {
   // Providers - Context/Providers, Theme, data
   // Layout
