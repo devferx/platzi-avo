@@ -21,7 +21,7 @@ const Cart = () => {
               <td>Avo 1</td>
               <td>1.25 $</td>
               <td>3</td>
-              <td className={styles.actions}>
+              <td>
                 <button className={styles.action}>
                   <img
                     className={styles.actionIcon}
