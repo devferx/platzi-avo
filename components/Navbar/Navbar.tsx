@@ -27,13 +27,13 @@ export default function Navbar() {
         <Link href="/about">
           <a className={styles.navbarLink}>About</a>
         </Link>
-        <Link href="/">
+        <Link href="/cart">
           <a className={styles.navbarLink}>
             Canasta ({cartContext?.totalQuantityProducts})
             <img
               className={styles.navbarPicnic}
               src="/images/picnic-basket.svg"
-              alt=""
+              alt="picnic basket"
             />
           </a>
         </Link>
