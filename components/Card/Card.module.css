@@ -23,15 +23,3 @@
 .price {
   text-align: center;
 }
-
-.btn {
-  display: block;
-  width: 100%;
-  background-color: var(--primary);
-  text-decoration: none;
-  padding: 10px 0;
-  border-radius: 6px;
-  text-align: center;
-  color: var(--textColor);
-  font-weight: 700;
-}

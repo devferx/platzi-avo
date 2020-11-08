@@ -1,6 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 import styles from './Card.module.css'
+import ButtonLink from '@components/ButtonLink/ButtonLink'
 
 interface Props {
   avo: TProduct
@@ -15,9 +16,10 @@ const Card = ({ avo }: Props) => (
         Precio: <strong>{avo.price}$</strong>
       </p>
     </div>
-    <Link href={'/product/[id]'} as={`/product/${avo.id}`}>
-      <a className={styles.btn}>ver mas</a>
-    </Link>
+
+    <ButtonLink href={'/product/[id]'} as={`/product/${avo.id}`}>
+      ver mas
+    </ButtonLink>
   </div>
 )
 

@@ -1,4 +1,5 @@
 import React from 'react'
+import ButtonLink from '@components/ButtonLink/ButtonLink'
 import styles from './Header.module.css'
 
 const Header = () => {
@@ -9,6 +10,11 @@ const Header = () => {
         <p className={styles.textContentParagraph}>
           Nunca pares de aprender sobre los aguacates!
         </p>
+        <div className={styles.LinkContainer}>
+          <ButtonLink href="/yes-or-no">
+            ¿Deberias comer un aguacate?
+          </ButtonLink>
+        </div>
       </div>
       <div className={styles.ImageContent}>
         <div className={styles.imagesContainer}>
