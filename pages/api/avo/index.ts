@@ -1,7 +1,9 @@
 import { IncomingMessage, ServerResponse } from 'http'
+import enablePublicAccess from '@cors'
 import DB from '@database'
 
 const allAvos = async (request: IncomingMessage, response: ServerResponse) => {
+  await enablePublicAccess(request, response)
   const db = new DB()
   const allEntries = await db.getAll()
   const length = allEntries.length
