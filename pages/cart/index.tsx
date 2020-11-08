@@ -11,16 +11,18 @@ const Cart = () => {
           <thead>
             <tr className={styles.tableHeadRow}>
               <th>Product</th>
-              <th>Price</th>
               <th>Quantity</th>
+              <th>Price Unit.</th>
+              <th>Price Total</th>
               <th>Actions</th>
             </tr>
           </thead>
           <tbody>
             <tr className={styles.tableBodyRow}>
               <td>Avo 1</td>
-              <td>1.25 $</td>
               <td>3</td>
+              <td>1.25 $</td>
+              <td>50 $</td>
               <td>
                 <button className={styles.action}>
                   <img
@@ -39,9 +41,10 @@ const Cart = () => {
               </td>
             </tr>
             <tr className={styles.tableBodyRow}>
-              <td>Avo 1</td>
-              <td>1.25 $</td>
+              <td>Avo 2</td>
               <td>3</td>
+              <td>1.25 $</td>
+              <td>50 $</td>
               <td>
                 <button className={styles.action}>
                   <img
@@ -58,6 +61,15 @@ const Cart = () => {
                   />
                 </button>
               </td>
+            </tr>
+            <tr
+              className={`${styles.tableBodyRow} ${styles.tableImportantRow}`}
+            >
+              <td>Total</td>
+              <td>6</td>
+              <td></td>
+              <td>50 $</td>
+              <td></td>
             </tr>
           </tbody>
         </table>

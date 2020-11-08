@@ -58,6 +58,11 @@
   width: 3em;
 }
 
+.tableImportantRow {
+  font-weight: bold;
+  font-size: 1.3em;
+}
+
 @media screen and (max-width: 768px) {
   .mainContainer {
     padding: 0 5%;
@@ -66,6 +71,12 @@
   .contentTable {
     min-width: 100%;
   }
+
+  .contentTable th,
+  .contentTable td {
+    padding: 7px 10px;
+  }
+
   .actionIcon {
     width: 2.2em;
   }
