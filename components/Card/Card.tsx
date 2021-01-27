@@ -1,5 +1,5 @@
 import React from 'react'
-import Link from 'next/link'
+import Image from 'next/image'
 import styles from './Card.module.css'
 import ButtonLink from '@components/ButtonLink/ButtonLink'
 
@@ -9,7 +9,8 @@ interface Props {
 
 const Card = ({ avo }: Props) => (
   <div className={styles.card}>
-    <img className={styles.image} src={avo.image} alt={avo.name} />
+    <Image className={styles.image} src={avo.image} width={234} height={234} />
+    {/* <img className={styles.image} src={avo.image} alt={avo.name} /> */}
     <div>
       <p className={styles.title}>{avo.name}</p>
       <p className={styles.price}>
