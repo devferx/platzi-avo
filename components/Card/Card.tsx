@@ -18,9 +18,7 @@ const Card = ({ avo }: Props) => (
       </p>
     </div>
 
-    <ButtonLink href={'/product/[id]'} as={`/product/${avo.id}`}>
-      ver mas
-    </ButtonLink>
+    <ButtonLink href={`/product/${avo.id}`}>ver mas</ButtonLink>
   </div>
 )
 

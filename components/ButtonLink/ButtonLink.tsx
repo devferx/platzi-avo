@@ -4,14 +4,13 @@ import styles from './ButtonLink.module.css'
 
 const ButtonLink = ({
   href,
-  as,
   children,
 }: {
   href: string
   as?: string
   children: React.ReactNode
 }) => (
-  <Link href={href} as={as}>
+  <Link href={href} passHref>
     <a className={styles.btn}>{children}</a>
   </Link>
 )
