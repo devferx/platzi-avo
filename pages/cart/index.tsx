@@ -13,7 +13,7 @@ const Cart = () => {
     <section className={styles.mainContainer}>
       {cartContext?.cart.length !== 0 ? (
         <>
-          <h1 className={styles.title}>Carrito de compras</h1>
+          <h1 className={styles.title}>🥑 Shopping Cart 🥑</h1>
           <article>
             <table className={styles.contentTable}>
               <thead>
@@ -70,9 +70,7 @@ const Cart = () => {
           </article>
         </>
       ) : (
-        <h1 className={styles.title}>
-          No tienes Nada en tu carrito de compras :(
-        </h1>
+        <h1 className={styles.title}>🥑 You have nothing in your cart 🥑</h1>
       )}
     </section>
   )

@@ -29,7 +29,7 @@ export default function Navbar() {
         </Link>
         <Link href="/cart">
           <a className={styles.navbarLink}>
-            Canasta ({cartContext?.totalQuantityProducts})
+            Cart ({cartContext?.totalQuantityProducts})
             <img
               className={styles.navbarPicnic}
               src="/images/picnic-basket.svg"

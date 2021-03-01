@@ -41,7 +41,7 @@ const ProductForm = ({ product }: Props) => {
         type="number"
       />
       <button className={styles.formBtn} type="submit">
-        Agregar al carrito
+        Add to Cart
       </button>
     </form>
   )

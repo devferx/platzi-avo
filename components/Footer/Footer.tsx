@@ -10,23 +10,23 @@ const Footer = () => {
       <div className={styles.footerGrid}>
         <div>
           <p>
-            <strong>Nosotros</strong>
+            <strong>About Us</strong>
           </p>
           <Link href="/about">
-            <a className={styles.footerLink}>Conoce más</a>
+            <a className={styles.footerLink}>About Avocados</a>
           </Link>
         </div>
         <div>
           <p>
-            <strong>Servicios</strong>
+            <strong>Services</strong>
           </p>
           <Link href="/about">
-            <a className={styles.footerLink}>Todos los productos</a>
+            <a className={styles.footerLink}>All Products</a>
           </Link>
         </div>
         <div>
           <p>
-            <strong>creado por</strong>
+            <strong>created by</strong>
           </p>
           <a className={styles.footerLink} href="https://twitter.com/devferx">
             devferx

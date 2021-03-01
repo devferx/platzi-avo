@@ -8,12 +8,10 @@ const Header = () => {
       <div className={styles.textContent}>
         <h1 className={styles.textContentTitle}>avocados are the future!</h1>
         <p className={styles.textContentParagraph}>
-          Nunca pares de aprender sobre los aguacates!
+          Never stop learning about avocados!
         </p>
         <div className={styles.LinkContainer}>
-          <ButtonLink href="/yes-or-no">
-            ¿Deberias comer un aguacate?
-          </ButtonLink>
+          <ButtonLink href="/yes-or-no">Should you eat an avocado?</ButtonLink>
         </div>
       </div>
       <div className={styles.ImageContent}>

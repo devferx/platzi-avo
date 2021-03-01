@@ -9,7 +9,7 @@ interface Props {
 const CardList = ({ listAvos }: Props) => {
   return (
     <section className={styles.section}>
-      <h3 className={styles.title}>Nuestros Productos</h3>
+      <h3 className={styles.title}>Our products</h3>
       <article className={styles.grid}>
         {listAvos.map((avo) => (
           <Card key={avo.name} avo={avo} />

@@ -18,7 +18,7 @@ const ProductHeader = ({ product }: Props) => (
 
     <div className={styles.heroTextContainer}>
       <h3 className={styles.name}>{product.name}</h3>
-      <p className={styles.price}>precio: {product.price}$</p>
+      <p className={styles.price}>price: {product.price}$</p>
       <span className={styles.sku}>SKU: {product.sku}</span>
       <ProductForm product={product} />
     </div>

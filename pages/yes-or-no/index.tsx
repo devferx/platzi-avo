@@ -18,7 +18,7 @@ export const getServerSideProps = async () => {
 const YesOrNo = ({ answer }: { answer: string }) => {
   return (
     <section className={styles.centerItems}>
-      <h1 className={styles.title}>¿Deberias comer un aguacate?</h1>
+      <h1 className={styles.title}>Should you eat an avocado?</h1>
       <h3 className={styles.answer}>{answer}</h3>
     </section>
   )

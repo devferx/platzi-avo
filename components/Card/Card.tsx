@@ -14,11 +14,11 @@ const Card = ({ avo }: Props) => (
     <div>
       <p className={styles.title}>{avo.name}</p>
       <p className={styles.price}>
-        Precio: <strong>{avo.price}$</strong>
+        Price: <strong>{avo.price}$</strong>
       </p>
     </div>
 
-    <ButtonLink href={`/product/${avo.id}`}>ver mas</ButtonLink>
+    <ButtonLink href={`/product/${avo.id}`}>see more</ButtonLink>
   </div>
 )
 
