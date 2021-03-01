@@ -3,6 +3,7 @@
   height: calc(100vh - 80px);
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
 }
 
 .textContent {
@@ -102,6 +103,7 @@
     height: auto;
     grid-template-columns: 1fr;
     grid-template-rows: calc(100vh - 80px) 100vh;
+    gap: 0;
     font-size: 10px;
   }
 
