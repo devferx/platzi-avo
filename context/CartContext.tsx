@@ -1,4 +1,6 @@
 import { useState, createContext, FunctionComponent } from 'react'
+import type { ReactNode } from 'react'
+
 import { CartItem } from '../models/cart'
 
 export type CardContextType = {
@@ -11,7 +13,11 @@ export type CardContextType = {
 
 export const CartContext = createContext<CardContextType | null>(null)
 
-const CartProvider: FunctionComponent = ({ children }) => {
+interface CartProviderProps {
+  children: ReactNode
+}
+
+const CartProvider = ({ children }: CartProviderProps) => {
   const [cart, setCart] = useState<Array<CartItem>>([])
 
   const findIndexByName = (name: string) =>

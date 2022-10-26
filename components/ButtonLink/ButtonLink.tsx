@@ -10,8 +10,8 @@ const ButtonLink = ({
   as?: string
   children: React.ReactNode
 }) => (
-  <Link href={href} passHref>
-    <a className={styles.btn}>{children}</a>
+  <Link className={styles.btn} href={href} passHref>
+    {children}
   </Link>
 )
 

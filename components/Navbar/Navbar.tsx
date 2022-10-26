@@ -21,21 +21,19 @@ export default function Navbar() {
       />
 
       <menu className={styles.navbarMenu}>
-        <Link href="/">
-          <a className={`${styles.navbarLink}`}>Home</a>
+        <Link className={`${styles.navbarLink}`} href="/">
+          Home
         </Link>
-        <Link href="/about">
-          <a className={styles.navbarLink}>About</a>
+        <Link className={styles.navbarLink} href="/about">
+          About
         </Link>
-        <Link href="/cart">
-          <a className={styles.navbarLink}>
-            Cart ({cartContext?.totalQuantityProducts})
-            <img
-              className={styles.navbarPicnic}
-              src="/images/picnic-basket.svg"
-              alt="picnic basket"
-            />
-          </a>
+        <Link className={styles.navbarLink} href="/cart">
+          Cart ({cartContext?.totalQuantityProducts})
+          <img
+            className={styles.navbarPicnic}
+            src="/images/picnic-basket.svg"
+            alt="picnic basket"
+          />
         </Link>
       </menu>
     </nav>

@@ -12,16 +12,16 @@ const Footer = () => {
           <p>
             <strong>About Us</strong>
           </p>
-          <Link href="/about">
-            <a className={styles.footerLink}>About Avocados</a>
+          <Link className={styles.footerLink} href="/about">
+            About Avocados
           </Link>
         </div>
         <div>
           <p>
             <strong>Services</strong>
           </p>
-          <Link href="/about">
-            <a className={styles.footerLink}>All Products</a>
+          <Link className={styles.footerLink} href="/about">
+            All Products
           </Link>
         </div>
         <div>

@@ -4,15 +4,13 @@ import styles from './Logo.module.css'
 
 const Logo = () => {
   return (
-    <Link href="/">
-      <a className={styles.logoContainer}>
-        <img
-          className={styles.logoImage}
-          src="/images/avocado-nav.svg"
-          alt="avocado"
-        />
-        <p className={styles.logoTitle}>platzi avocado</p>
-      </a>
+    <Link className={styles.logoContainer} href="/">
+      <img
+        className={styles.logoImage}
+        src="/images/avocado-nav.svg"
+        alt="avocado"
+      />
+      <p className={styles.logoTitle}>platzi avocado</p>
     </Link>
   )
 }

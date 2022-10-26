@@ -9,7 +9,13 @@ interface Props {
 
 const Card = ({ avo }: Props) => (
   <div className={styles.card}>
-    <Image className={styles.image} src={avo.image} width={234} height={234} />
+    <Image
+      className={styles.image}
+      src={avo.image}
+      width={234}
+      height={234}
+      alt={avo.name}
+    />
     {/* <img className={styles.image} src={avo.image} alt={avo.name} /> */}
     <div>
       <p className={styles.title}>{avo.name}</p>
